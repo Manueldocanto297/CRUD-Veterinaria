@@ -22,28 +22,28 @@ Partial Class Form1
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.grdPerros = New System.Windows.Forms.DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.txtId = New System.Windows.Forms.TextBox()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
+        Me.txtRaza = New System.Windows.Forms.TextBox()
+        Me.txtColor = New System.Windows.Forms.TextBox()
+        Me.btnIngresar = New System.Windows.Forms.Button()
+        Me.btnEditar = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
+        CType(Me.grdPerros, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'DataGridView1
+        'grdPerros
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(26, 26)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(370, 272)
-        Me.DataGridView1.TabIndex = 0
+        Me.grdPerros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.grdPerros.Location = New System.Drawing.Point(26, 26)
+        Me.grdPerros.Name = "grdPerros"
+        Me.grdPerros.Size = New System.Drawing.Size(370, 272)
+        Me.grdPerros.TabIndex = 0
         '
         'Label1
         '
@@ -85,61 +85,61 @@ Partial Class Form1
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "Color:"
         '
-        'TextBox1
+        'txtId
         '
-        Me.TextBox1.Location = New System.Drawing.Point(428, 59)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(48, 20)
-        Me.TextBox1.TabIndex = 8
-        Me.TextBox1.Visible = False
+        Me.txtId.Location = New System.Drawing.Point(428, 59)
+        Me.txtId.Name = "txtId"
+        Me.txtId.ReadOnly = True
+        Me.txtId.Size = New System.Drawing.Size(48, 20)
+        Me.txtId.TabIndex = 8
         '
-        'TextBox2
+        'txtNombre
         '
-        Me.TextBox2.Location = New System.Drawing.Point(428, 103)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(255, 20)
-        Me.TextBox2.TabIndex = 9
+        Me.txtNombre.Location = New System.Drawing.Point(428, 103)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(255, 20)
+        Me.txtNombre.TabIndex = 9
         '
-        'TextBox3
+        'txtRaza
         '
-        Me.TextBox3.Location = New System.Drawing.Point(428, 147)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(255, 20)
-        Me.TextBox3.TabIndex = 10
+        Me.txtRaza.Location = New System.Drawing.Point(428, 147)
+        Me.txtRaza.Name = "txtRaza"
+        Me.txtRaza.Size = New System.Drawing.Size(255, 20)
+        Me.txtRaza.TabIndex = 10
         '
-        'TextBox4
+        'txtColor
         '
-        Me.TextBox4.Location = New System.Drawing.Point(428, 191)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(255, 20)
-        Me.TextBox4.TabIndex = 11
+        Me.txtColor.Location = New System.Drawing.Point(428, 191)
+        Me.txtColor.Name = "txtColor"
+        Me.txtColor.Size = New System.Drawing.Size(255, 20)
+        Me.txtColor.TabIndex = 11
         '
-        'Button1
+        'btnIngresar
         '
-        Me.Button1.Location = New System.Drawing.Point(428, 242)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(79, 23)
-        Me.Button1.TabIndex = 12
-        Me.Button1.Text = "Ingresar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnIngresar.Location = New System.Drawing.Point(428, 242)
+        Me.btnIngresar.Name = "btnIngresar"
+        Me.btnIngresar.Size = New System.Drawing.Size(79, 23)
+        Me.btnIngresar.TabIndex = 12
+        Me.btnIngresar.Text = "Ingresar"
+        Me.btnIngresar.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnEditar
         '
-        Me.Button2.Location = New System.Drawing.Point(513, 242)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(80, 23)
-        Me.Button2.TabIndex = 13
-        Me.Button2.Text = "Editar"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnEditar.Location = New System.Drawing.Point(513, 242)
+        Me.btnEditar.Name = "btnEditar"
+        Me.btnEditar.Size = New System.Drawing.Size(80, 23)
+        Me.btnEditar.TabIndex = 13
+        Me.btnEditar.Text = "Editar"
+        Me.btnEditar.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btnEliminar
         '
-        Me.Button3.Location = New System.Drawing.Point(599, 242)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(84, 23)
-        Me.Button3.TabIndex = 14
-        Me.Button3.Text = "Eliminar"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnEliminar.Location = New System.Drawing.Point(599, 242)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(84, 23)
+        Me.btnEliminar.TabIndex = 14
+        Me.btnEliminar.Text = "Eliminar"
+        Me.btnEliminar.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -147,38 +147,38 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.ClientSize = New System.Drawing.Size(704, 332)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.btnEliminar)
+        Me.Controls.Add(Me.btnEditar)
+        Me.Controls.Add(Me.btnIngresar)
+        Me.Controls.Add(Me.txtColor)
+        Me.Controls.Add(Me.txtRaza)
+        Me.Controls.Add(Me.txtNombre)
+        Me.Controls.Add(Me.txtId)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.grdPerros)
         Me.ForeColor = System.Drawing.Color.Black
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "Form1"
         Me.Text = "Veterinaria"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.grdPerros, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents grdPerros As DataGridView
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents txtId As TextBox
+    Friend WithEvents txtNombre As TextBox
+    Friend WithEvents txtRaza As TextBox
+    Friend WithEvents txtColor As TextBox
+    Friend WithEvents btnIngresar As Button
+    Friend WithEvents btnEditar As Button
+    Friend WithEvents btnEliminar As Button
 End Class
