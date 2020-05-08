@@ -1,4 +1,8 @@
-﻿Imports MySql.Data.MySqlClient
+﻿
+'###################################### Manuel Do Canto 7/5 ######################################
+
+Imports MySql.Data.MySqlClient
+
 Public Class Form1
     Dim conexion As MySqlConnection = New MySqlConnection
     Dim cmd As New MySqlCommand
