@@ -33,7 +33,7 @@ Public Class Form1
     Private Sub btnIngresar_Click(sender As Object, e As EventArgs) Handles btnIngresar.Click
         conexion.ConnectionString = "server=localhost; database=veterinaria; Uid=root; pwd=135790;"
 
-        If (txtNombre.Text <> "") And (txtRaza.Text <> "") And (txtColor.Text <> "") Then
+        If (txtNombre.Text <> "") And (txtRaza.Text <> "") And (txtColor.Text <> "") And MessageBox.Show("¿Desea ingresar este registro?", "Confirmacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.OK Then
             Try
                 conexion.Open()
                 cmd.Connection = conexion
@@ -51,11 +51,16 @@ Public Class Form1
 
                 ActualizarSelect()
 
+                MsgBox("¡Se ha creado el registro correctamente!", , "Aviso")
+
+                txtId.Clear()
+                txtNombre.Clear()
+                txtRaza.Clear()
+                txtColor.Clear()
+
             Catch ex As Exception
                 MsgBox(ex.Message)
             End Try
-        Else
-            MsgBox("Error, compruebe que todos los datos sean correctos")
         End If
     End Sub
 
@@ -76,7 +81,7 @@ Public Class Form1
 
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
         conexion.ConnectionString = "server=localhost; database=veterinaria; Uid=root; pwd=135790;"
-        If (grdPerros.SelectedRows.Count > 0) Then
+        If (grdPerros.SelectedRows.Count > 0) And MessageBox.Show("¿Desea editar el registro seleccionado?", "Confirmacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.OK Then
 
             Try
                 conexion.Open()
@@ -97,11 +102,16 @@ Public Class Form1
 
                 ActualizarSelect()
 
+                MsgBox("¡Se ha editado el registro correctamente!", , "Aviso")
+
+                txtId.Clear()
+                txtNombre.Clear()
+                txtRaza.Clear()
+                txtColor.Clear()
+
             Catch ex As Exception
                 MsgBox(ex.Message)
             End Try
-        Else
-            MsgBox("Error, compuebe los datos antes de editar")
         End If
     End Sub
 
@@ -124,6 +134,8 @@ Public Class Form1
                 conexion.Close()
 
                 ActualizarSelect()
+
+                MsgBox("¡Se ha eliminado el registro correctamente!", , "Aviso")
 
                 txtId.Clear()
                 txtNombre.Clear()
